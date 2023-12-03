@@ -8,7 +8,7 @@ API_HASH = os.environ.get("API_HASH")
 # For /log cmd
 OWNER_ID = [int(i) for i in os.environ.get("OWNER_ID", "1204927413").split(" ")]
 # No time limit for this users
-AUTH_USERS = [int(i) for i in os.environ.get("AUTH_USERS", "1204927413").split(" ")]
+AUTH_USERS = [int(i) for i in os.environ.get("AUTH_USERS", "1204927413").split(",") if i.isdigit()]
 # Time gap after each request (in seconds)
 TIME_GAP = int(os.environ.get("TIME_GAP", "360"))
 # Bot channel ID for ForceSub, don't forget to add bot in Bot Channel
